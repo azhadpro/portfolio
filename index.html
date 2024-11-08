@@ -46,16 +46,22 @@
     <footer>
         <p>&copy; 2024 Azhad</p>
     </footer>
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
+
 
 </body>
+	
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+
+        // Scroll smoothly to the target section
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start' // Optional: aligns the section at the top
+        });
+    });
+});
+</script>
+	
 </html>
