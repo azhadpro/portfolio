@@ -27,30 +27,9 @@
 	    <button id="show-all">Show All</button>
 	    <button id="web-dev">Web Development</button>
 	    <button id="data-science">Data Science</button>
-	
-	    <div class="project web-dev">
-	        <h3>Project 1 - To-Do List</h3>
-	        <p>Web Development Project</p>
-	    </div>
-	    <div class="project data-science">
-	        <h3>Project 2 - Data Analysis</h3>
-	        <p>Data Science Project</p>
-	    </div>
-    	<div class="project">
-        <img src="todo-screenshot.jpg" alt="To-Do List Screenshot" class="project-img">
-    </div>
-	    <!-- More projects -->
     </section>
-
-<!-- Modal -->
-<div id="modal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modal-img">
-</div>
-
-
-
-    <section id="contact">
+	
+<section id="contact">
     <h2>Contact Me</h2>
     <form id="contact-form">
         <label for="name">Name:</label>
@@ -66,7 +45,6 @@
     </form>
 </section>
 
-
     <footer>
         <p>&copy; 2024 Azhad</p>
     </footer>
@@ -74,66 +52,6 @@
 
 </body>
 	
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default link behavior
-
-        // Scroll smoothly to the target section
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start' // Optional: aligns the section at the top
-        });
-    });
-});
-</script>
-<script>
-    document.getElementById('show-all').addEventListener('click', function() {
-        document.querySelectorAll('.project').forEach(function(project) {
-            project.style.display = 'block';
-        });
-    });
-
-    document.getElementById('web-dev').addEventListener('click', function() {
-        document.querySelectorAll('.project').forEach(function(project) {
-            project.style.display = 'none';  // Hide all
-        });
-        document.querySelectorAll('.web-dev').forEach(function(project) {
-            project.style.display = 'block';  // Show Web Development projects
-        });
-    });
-
-    document.getElementById('data-science').addEventListener('click', function() {
-        document.querySelectorAll('.project').forEach(function(project) {
-            project.style.display = 'none';  // Hide all
-        });
-        document.querySelectorAll('.data-science').forEach(function(project) {
-            project.style.display = 'block';  // Show Data Science projects
-        });
-    });
-</script>
-<script>
-// Get the modal
-var modal = document.getElementById("modal");
-
-// Get the image and insert it inside the modal
-var images = document.querySelectorAll('.project-img');
-var modalImg = document.getElementById("modal-img");
-
-images.forEach(function(img) {
-    img.onclick = function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-    }
-});
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-span.onclick = function() {
-    modal.style.display = "none";
-}
-</script>
 <script>
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault(); // Prevent form submission
@@ -159,6 +77,5 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 </script>
-
 	
 </html>
