@@ -15,6 +15,16 @@ body {
     padding: 20px;
 }
 
+body {
+    background-image: url(IMG_0291.JPG);
+    background-size: cover; /* Makes the image cover the entire page */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+    background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
+    height: 100vh; /* Makes the body take the full height of the viewport */
+    margin: 0; /* Removes any default margin */
+}
+
 /* For screens smaller than 600px (e.g., mobile) */
 @media (max-width: 600px) {
     body {
